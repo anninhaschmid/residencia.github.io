@@ -1,0 +1,194 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Residência em TI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #58a6ff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0d1117;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #58a6ff;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background-color: #238636;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2ea043;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+      background-color: #161b22;
+      color: #e6edf3;
+      font-size: 1rem;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #8b949e;
+    }
+
+    footer {
+      background-color: #161b22;
+      color: #8b949e;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sistema de Residência em TI</h1>
+  </header>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#inscricao">Inscrição</a>
+    <a href="#empresas">Empresas</a>
+    <a href="login.html">Login</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="container">
+    <section id="sobre">
+      <h2>Sobre o Programa</h2>
+      <p>
+        O Programa de Residência em TI promove capacitação acelerada por meio da metodologia de resolução de problemas reais, conectando jovens talentos às empresas.
+      </p>
+      <p>
+        Com desafios propostos por empresas parceiras, o residente desenvolve habilidades práticas e é avaliado em situações reais, permitindo uma contratação mais eficiente.
+      </p>
+    </section>
+
+    <section id="beneficios">
+      <h2>Benefícios</h2>
+      <ul>
+        <li>🔍 Avaliação prática e profissional antes da contratação</li>
+        <li>💼 Oportunidade de primeiro emprego</li>
+        <li>🚀 Desenvolvimento de carreira em tecnologia</li>
+        <li>📈 Visibilidade de talentos para empresas</li>
+        <li>🤝 Parceria com empresas inovadoras</li>
+      </ul>
+    </section>
+
+    <section id="inscricao">
+      <h2>Inscreva-se</h2>
+      <p>Preencha o formulário e receba novidades sobre as próximas turmas.</p>
+      <form onsubmit="return enviarFormulario()">
+        <input type="text" name="nome" placeholder="Seu nome completo" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="mensagem" placeholder="Conte um pouco sobre seu interesse" rows="4"></textarea>
+        <button type="submit" class="btn">Enviar Inscrição</button>
+      </form>
+    </section>
+
+    <section id="empresas">
+      <h2>Cadastro de Empresas</h2>
+      <p>Empresas interessadas em participar do programa podem se cadastrar abaixo:</p>
+      <form onsubmit="return cadastrarEmpresa()">
+        <input type="text" name="empresa" placeholder="Nome da empresa" required />
+        <input type="email" name="emailEmpresa" placeholder="E-mail de contato" required />
+        <textarea name="mensagemEmpresa" placeholder="Fale um pouco sobre sua empresa e interesse no programa" rows="4"></textarea>
+        <button type="submit" class="btn">Cadastrar Empresa</button>
+      </form>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>E-mail: contato@residenciati.com.br</p>
+      <p>Telefone: (11) 99999-9999</p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Sistema de Residência em TI. Todos os direitos reservados.
+  </footer>
+  <script>
+    function enviarFormulario() {
+      alert("Inscrição enviada com sucesso! Entraremos em contato em breve.");
+      return false;
+    }
+
+    function cadastrarEmpresa() {
+      alert("Cadastro da empresa enviado com sucesso! Entraremos em contato.");
+      return false;
+    }
+  </script>
+</body>
+</html>
