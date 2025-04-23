@@ -1,4 +1,4 @@
-emailjs.init("SEU_USER_ID_DO_EMAILJS"); // Substitua pelo seu User ID
+emailjs.init("SEU_USER_ID_DO_EMAILJS");
 
 function enviarFormulario() {
   const nome = document.querySelector('input[name="nome"]').value;
