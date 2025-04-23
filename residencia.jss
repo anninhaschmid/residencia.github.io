@@ -1,4 +1,4 @@
-emailjs.init("SEU_USER_ID_DO_EMAILJS");
+emailjs.init("contato@residenciati.com.br");
 
 function enviarFormulario() {
   const nome = document.querySelector('input[name="nome"]').value;
